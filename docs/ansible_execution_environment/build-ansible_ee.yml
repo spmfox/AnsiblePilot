@@ -1,0 +1,6 @@
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Start podman build for ansible_ee.containerfile
+      ansible.builtin.shell: podman build -f ansible_ee.containerfile -t localhost/ansible_ee

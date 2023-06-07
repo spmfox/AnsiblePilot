@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Copy plugin directory to Cockpit plugins directory
+      ansible.builtin.copy:
+        src: AnsiblePilotPlugin/
+        dest: /usr/share/cockpit/AnsiblePilot
