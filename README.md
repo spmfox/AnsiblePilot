@@ -26,7 +26,7 @@ The idea was to get some of the features of AWX but none of the bloat.
 - Looks for container images that have the label ```ansible_execution_environment```
   - That means you have to build your own image and bake that label in
   - This gives the flexibility to assign any mounts/ports/etc you need
-  - Sample containerfile, using AlmaLinux 9 and /opt/playbooks for a mount can be found in ```docs/ansible_execution_environment```
+  - Sample containerfile, using CentOS Stream 9 and /opt/playbooks for a mount can be found in ```docs/ansible_execution_environment```
 - Gives the ability to add extra Ansible parameters at run-time with or without using containers
 - Workflow has only been tested as a user with sudo rights, unprivileged containers are the ultimate goal
 
