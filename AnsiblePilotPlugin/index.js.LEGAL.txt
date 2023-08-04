@@ -1,14 +1,8 @@
 Bundled license information:
 
-object-assign/index.js:
-  /*
-  object-assign
-  (c) Sindre Sorhus
-  @license MIT
-  */
-
 react/cjs/react.development.js:
-  /** @license React v17.0.2
+  /**
+   * @license React
    * react.development.js
    *
    * Copyright (c) Facebook, Inc. and its affiliates.
@@ -18,7 +12,8 @@ react/cjs/react.development.js:
    */
 
 scheduler/cjs/scheduler.development.js:
-  /** @license React v0.20.2
+  /**
+   * @license React
    * scheduler.development.js
    *
    * Copyright (c) Facebook, Inc. and its affiliates.
@@ -27,18 +22,9 @@ scheduler/cjs/scheduler.development.js:
    * LICENSE file in the root directory of this source tree.
    */
 
-scheduler/cjs/scheduler-tracing.development.js:
-  /** @license React v0.20.2
-   * scheduler-tracing.development.js
-   *
-   * Copyright (c) Facebook, Inc. and its affiliates.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
-
 react-dom/cjs/react-dom.development.js:
-  /** @license React v17.0.2
+  /**
+   * @license React
    * react-dom.development.js
    *
    * Copyright (c) Facebook, Inc. and its affiliates.
@@ -62,7 +48,7 @@ react-dom/cjs/react-dom.development.js:
 
 tabbable/dist/index.esm.js:
   /*!
-  * tabbable 6.1.2
+  * tabbable 6.2.0
   * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
   */
 

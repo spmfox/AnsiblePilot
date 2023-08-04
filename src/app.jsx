@@ -35,7 +35,7 @@ export class Application extends React.Component {
   componentDidMount() {
     const populatePlaybookList = () => {
       const playbookDropdown = document.getElementById('playbook');
-      const command = `ls ${this.state.playbookFolder} |grep -e .yml -e .yaml`;
+      const command = `ls ${this.state.playbookFolder} | grep -e .yml -e .yaml`;
 
       const process = cockpit.spawn(['bash', '-c', command], { superuser: 'require', err: 'message' });
 
@@ -60,7 +60,6 @@ export class Application extends React.Component {
     };
 
     const populateImageList = () => {
-      const imageNameDropdown = document.getElementById('image-name');
       const command = 'podman image list --filter label=ansible_execution_environment --noheading --format "table {{.Repository}}"';
 
       const process = cockpit.spawn(['bash', '-c', command], { superuser: 'require', err: 'message' });
@@ -68,18 +67,8 @@ export class Application extends React.Component {
       process.done((data) => {
         const images = data.split('\n');
 
-        this.setState({ imageList: images.filter((image) => image !== '') });
-
-        imageNameDropdown.innerHTML = '';
-
-        images.forEach(function (image) {
-          if (image !== '') {
-            const option = document.createElement('option');
-            option.value = image;
-            option.textContent = image;
-            imageNameDropdown.appendChild(option);
-          }
-        });
+        // Filter out empty strings and set the image list in the state
+        this.setState({ imageList: images.filter((image) => image.trim() !== '') });
       });
 
       process.fail(function (error) {
@@ -188,7 +177,9 @@ export class Application extends React.Component {
         <Card>
           <CardTitle>Output</CardTitle>
           <CardBody>
-            <pre id="output"></pre>
+            <div id="output-container" style={{ height: 'calc(100vh - 400px)', overflow: 'auto' }}>
+              <pre id="output"></pre>
+            </div>
           </CardBody>
         </Card>
       </div>

@@ -2445,19 +2445,8 @@ label.pf-v5-c-check,
 .pf-v5-t-light.pf-m-opaque-300 {
   background-color: #f0f0f0;
 }
-.pf-v5-c-input-group__text {
-  padding-inline: var(--pf-v5-global--spacer--sm);
-}
 .pf-v5-c-select[data-popper-reference-hidden=false] {
   inline-size: auto;
-}
-.pf-v5-theme-dark .pf-v5-c-alert.pf-m-custom {
-  --pf-v5-c-alert--BackgroundColor: var(--pf-v5-global--palette--black-600);
-  --pf-v5-c-alert__title--Color: var(--pf-v5-global--custom-color--200);
-}
-.pf-v5-c-about-modal-box__close {
-  --pf-v5-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-v5-global--BackgroundColor--dark-200);
-  --pf-v5-c-about-modal-box__close--c-button--hover--BackgroundColor: var(--pf-v5-global--BackgroundColor--dark-400);
 }
 .ct-m-nav__tertiary-wrap .pf-v5-c-nav__list {
   flex-wrap: wrap;
@@ -2523,6 +2512,9 @@ select.pf-v5-c-form-control {
   font-size: inherit;
   font-family: inherit;
 }
+.pf-v5-c-toolbar {
+  --pf-v5-c-toolbar__item--AlignSelf: baseline;
+}
 @media screen and (max-width: 991px) {
   .pf-v5-c-toolbar.ct-compact {
     display: flex;
@@ -2547,11 +2539,17 @@ select.pf-v5-c-form-control {
 .pf-v5-l-flex {
   gap: var(--pf-v5-l-flex--spacer-base);
 }
+.pf-v5-l-flex:not([class*=pf-m-space-items-]) {
+  gap: var(--pf-v5-l-flex--spacer--md);
+}
+.pf-v5-l-flex:not([class*=pf-m-space-items-]) > * {
+  --pf-v5-l-flex--spacer--column: 0;
+}
 .pf-v5-l-flex > :not(.pf-v5-l-flex) {
   --pf-v5-l-flex--spacer-base: 0;
 }
 .pf-v5-l-flex[class*=pf-m-space-items-] > * {
-  --pf-v5-l-flex--spacer: 0;
+  --pf-v5-l-flex--spacer--column: 0;
 }
 .pf-v5-l-flex[class*=pf-m-space-items-none] {
   --pf-v5-l-flex--spacer-base: var(--pf-v5-l-flex--spacer--none);
@@ -2613,13 +2611,6 @@ select.pf-v5-c-form-control {
 }
 .pf-v5-theme-dark .pf-v5-c-text-input-group .pf-v5-c-text-input-group__text:not(:focus):not(:hover)::after {
   border-block-end-color: var(--pf-v5-global--BorderColor--400);
-}
-.pf-v5-theme-dark .pf-v5-c-label {
-  --pf-v5-c-label--m-gold--BackgroundColor: var(--pf-v5-global--BackgroundColor--300);
-  --pf-v5-c-label--m-gold__content--Color: var(--pf-v5-global--palette--gold-100);
-}
-.pf-v5-theme-dark .pf-v5-c-label.pf-m-gold {
-  --pf-v5-c-label__content--Color: var(--pf-v5-c-label--m-gold__content--Color);
 }
 .pf-v5-theme-dark .pf-v5-c-modal-box .pf-v5-c-table {
   background-color: inherit;
