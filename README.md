@@ -2,8 +2,6 @@
 
 Cockpit plugin to run Ansible playbooks inside Podman containers.
 
-![AnsiblePilot](docs/images/logo.png)
-
 This cockpit plugin gives the ability to run Ansible playbooks in (or not) a Podman container.
 The idea was to get some of the features of AWX but none of the bloat.
 
